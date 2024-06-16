@@ -16,7 +16,6 @@ export default function LoginOTP() {
   }
 
   const checkOtp = () => {
-    console.log(otp, 'otp--------->')
     if (otp !== correctOtp.toString()) {
       setOtpError('Incorrect PIN')
       return 
@@ -36,7 +35,7 @@ export default function LoginOTP() {
   return (
     <main className='h-full flex justify-center align-middle'>
       <div className="flex flex-col justify-center align-middle px-6 py-12 lg:px-8">
-        <h2 className="mb-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+        <h2 className="mb-10 text-2xl font-bold leading-9 text-gray-900">
           OTP authenticator
         </h2>
         {!loading ? (

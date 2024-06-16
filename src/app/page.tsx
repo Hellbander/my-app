@@ -24,15 +24,6 @@ const Login = () => {
     }
   }
 
-  const passwordCheck = () => {
-    setLoading(true)
-      setTimeout(() => {
-        setLoading(false)
-      }, 1500)
-
-    setEmailError(`Email that you entered doesn't exist`)
-  }
-
   const onButtonClick = () => {
     setEmailError('')
     setPasswordError('')
@@ -86,7 +77,7 @@ const Login = () => {
             </div>
 
             <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-              <form className="space-y-6" action={onButtonClick}>
+              <form name='login' className="space-y-6" action={onButtonClick}>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                     Email address
@@ -127,6 +118,7 @@ const Login = () => {
 
                 <div>
                   <button
+                    id='sign-in'
                     type="submit"
                     className="flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                   >
